@@ -1,0 +1,235 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration Form</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f8;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: auto;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin-top: 12px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="email"],
+        input[type="url"],
+        input[type="tel"],
+        input[type="date"],
+        input[type="datetime-local"],
+        input[type="file"] {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .inline-group {
+            margin-top: 10px;
+        }
+
+        .inline-group label {
+            display: inline;
+            font-weight: normal;
+            margin-right: 15px;
+        }
+
+        .buttons {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            background-color: #0077cc;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #005fa3;
+        }
+
+        .note {
+            color: #666;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <h2>User Registration Form</h2>
+
+    <!-- Block-level element -->
+    <p class="note">
+        Fields marked with * are required.
+        <span style="color:red;">*</span>
+        <!-- Inline element -->
+    </p>
+
+    <form action="https://httpbin.org/post" method="post">
+
+        <!-- Text -->
+        <label for="fullname">Full Name *</label>
+        <input type="text"
+               id="fullname"
+               name="fullname"
+               placeholder="Enter your full name"
+               required>
+
+        <!-- Password -->
+        <label for="password">Password *</label>
+        <input type="password"
+               id="password"
+               name="password"
+               placeholder="Enter password"
+               required>
+
+        <!-- Email -->
+        <label for="email">Email *</label>
+        <input type="email"
+               id="email"
+               name="email"
+               placeholder="Enter your email"
+               required>
+
+        <!-- URL -->
+        <label for="website">Website *</label>
+        <input type="url"
+               id="website"
+               name="website"
+               placeholder="https://example.com"
+               required>
+
+        <!-- Telephone -->
+        <label for="phone">Phone Number *</label>
+        <input type="tel"
+               id="phone"
+               name="phone"
+               placeholder="9876543210"
+               pattern="[0-9]{10}"
+               required>
+
+        <!-- Date -->
+        <label for="dob">Date of Birth *</label>
+        <input type="date"
+               id="dob"
+               name="dob"
+               required>
+
+        <!-- Datetime Local -->
+        <label for="appointment">Preferred Appointment *</label>
+        <input type="datetime-local"
+               id="appointment"
+               name="appointment"
+               required>
+
+        <!-- File Upload -->
+        <label for="resume">Upload Resume *</label>
+        <input type="file"
+               id="resume"
+               name="resume"
+               required>
+
+        <!-- Radio Buttons -->
+        <label>Gender *</label>
+        <div class="inline-group">
+            <label>
+                <input type="radio" name="gender" value="Male" required>
+                Male
+            </label>
+
+            <label>
+                <input type="radio" name="gender" value="Female">
+                Female
+            </label>
+
+            <label>
+                <input type="radio" name="gender" value="Other">
+                Other
+            </label>
+        </div>
+
+        <!-- Checkbox -->
+        <label>Interests *</label>
+        <div class="inline-group">
+            <label>
+                <input type="checkbox" name="interest" value="Coding" required>
+                Coding
+            </label>
+
+            <label>
+                <input type="checkbox" name="interest" value="Reading">
+                Reading
+            </label>
+
+            <label>
+                <input type="checkbox" name="interest" value="Sports">
+                Sports
+            </label>
+        </div>
+
+        <!-- Range -->
+        <label for="experience">
+            Experience Level (0-10)
+        </label>
+        <input type="range"
+               id="experience"
+               name="experience"
+               min="0"
+               max="10"
+               value="5">
+
+        <!-- Color -->
+        <label for="favcolor">
+            Favorite Theme Color
+        </label>
+        <input type="color"
+               id="favcolor"
+               name="favcolor"
+               value="#0077cc">
+
+        <!-- Buttons -->
+        <div class="buttons">
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </div>
+
+    </form>
+
+</div>
+
+</body>
+</html>
+```
